@@ -4,8 +4,7 @@
 )
 
 (defsrc
-  a s d f j k l ;
-  caps rctl
+  s d f l ; caps
 )
 (defvar
   tap-time 200
@@ -13,19 +12,14 @@
 )
 
 (defalias
-  a (tap-hold $tap-time $hold-time a lctl)
   s (tap-hold $tap-time $hold-time s lalt)
   d (tap-hold $tap-time $hold-time d lmet)
   f (tap-hold $tap-time $hold-time f lsft)
-  j (tap-hold $tap-time $hold-time j rsft)
-  k (tap-hold $tap-time $hold-time k rmet)
   l (tap-hold $tap-time $hold-time l lalt)
   ; (tap-hold $tap-time $hold-time ; rctl)
   caps lctl
-  rctl caps
 )
 
 (deflayer base
-  @a @s @d @f @j @k @l @;
-  @caps @rctl
+  @s @d @f @l @; @caps
 )
