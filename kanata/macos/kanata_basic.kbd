@@ -4,7 +4,7 @@
 )
 
 (defsrc
-  a s d f g h j k l ; n m , . caps spc
+  a s d f g h j k l ; n m , . u i caps spc
 )
 (defvar
   tap-time 300
@@ -26,10 +26,10 @@
 )
 
 (deflayer base
-  @a @s @d @f _ _ @j @k @l @; _ _ _ _ @caps @spc
+  @a @s @d @f _ _ @j @k @l @; _ _ _ _ _ _ @caps @spc
 )
 
 ;; Numbers layer: home row becomes numbers with symbols when shifted
 (deflayer numbers
-  1    2    3    4    5    6    7    8    9    0    -    =    [    ]    _    _
+  1    2    3    4    5    6    7    8    9    0    -    =    [    ]    `    \    _    _
 )
