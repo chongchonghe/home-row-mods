@@ -20,7 +20,7 @@
   k (tap-hold $tap-time $hold-time k rmet)
   l (tap-hold $tap-time $hold-time l lalt)
   ; (tap-hold $tap-time $hold-time ; rctl)
-  caps lctl
+  caps (tap-hold 50 $hold-time esc lctl)
 )
 
 (deflayer base
