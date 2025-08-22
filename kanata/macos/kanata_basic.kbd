@@ -5,12 +5,13 @@
 
 (defsrc
   f1   f2   f3   f4   f5   f6   f7   f8   f9   f10   f11   f12
-  a s d f j k l ; caps
+  a s d f j k l ; caps spc
+  q w e r t g z x c v b
   fn
 )
 (defvar
   tap-time 300
-  hold-time 200
+  hold-time 180
 )
 
 (defalias
@@ -23,17 +24,28 @@
   l (tap-hold $tap-time $hold-time l lalt)
   ; (tap-hold $tap-time $hold-time ; rctl)
   caps (tap-hold 50 $hold-time esc lctl)
+  spc (tap-hold $tap-time $hold-time spc (layer-while-held numbers))
   fnl (tap-hold 200 200 fn (layer-toggle fn))
 )
 
 (deflayer base
   brdn  brup  _    _    _    _   prev  pp  next  mute  vold  volu
-  @a @s @d @f @j @k @l @; @caps
+  @a @s @d @f @j @k @l @; @caps @spc
+  q w e r t g z x c v b
   @fnl
 )
 
 (deflayer fn
   f1   f2   f3   f4   f5   f6   f7   f8   f9   f10   f11   f12
-  _ _ _ _ _ _ _ _ _
+  _ _ _ _ _ _ _ _ _ _
+  q w e r t g z x c v b
+  fn
+)
+
+;; Numbers layer: home row becomes numbers with symbols when shifted
+(deflayer numbers
+  _ _ _ _ _ _ _ _ _ _ _ _
+  S-6 S-7 S-8 S-9 _ _ _ _ _ _
+  S-1 S-2 S-3 S-4 S-5 S-0 ` [ ] S-[ S-]
   fn
 )
