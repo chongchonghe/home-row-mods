@@ -27,6 +27,9 @@
   caps (tap-hold 50 $hold-time esc lctl)
   spc (tap-hold $tap-time $hold-time spc (layer-while-held numbers))
   fnl (tap-hold 200 200 fn (layer-toggle fn))
+  jj (tap-hold $tap-time $hold-time 4 rsft)
+  kk (tap-hold $tap-time $hold-time 5 rmet)
+  ll (tap-hold $tap-time $hold-time 6 lalt)
 )
 
 (deflayer base
@@ -48,7 +51,7 @@
 ;; Numbers layer: home row becomes numbers with symbols when shifted
 (deflayer numbers
   _ _ _ _ _ _ _ _ _ _ _ _
-  S-6 S-7 S-8 S-9 4 5 6 _ _ _
+  S-6 S-7 S-8 S-9 @jj @kk @ll _ _ _
   S-1 S-2 S-3 S-4 S-5 S-0 grv [ ] S-[ S-]
   1 2 3 7 8 9 . - + =
   fn
