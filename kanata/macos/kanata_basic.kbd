@@ -4,7 +4,7 @@
 )
 
 (defsrc
-  a caps
+  a s d f j k l ; caps
 )
 (defvar
   tap-time 300
@@ -24,9 +24,9 @@
 )
 
 (deflayer base
-  @a @caps
+  @a @s @d @f @j @k @l @; @caps
 )
 
 (deflayer fn
-  _ _
+  _ _ _ _ _ _ _ _ _
 )
